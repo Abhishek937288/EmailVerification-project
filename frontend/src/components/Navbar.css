@@ -1,0 +1,22 @@
+.navCompo{
+    width: 100vw;
+    height: 13vh;
+    background-color: slateblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw 0 5vw;
+    color: white;
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.right-nav a{
+    text-decoration: none;
+    color: white;
+}

@@ -4,6 +4,7 @@ import genTokenAndSetToken from "../utils/genandsetToken.js";
 import { sendOtpEmail } from "../utils/sendOtp.js";
 
 // controller for signup
+// new comment added
 
 export const signUp = async (req, res) => {
   const { username, email, password } = req.body;

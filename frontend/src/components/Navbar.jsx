@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const auth = true;
+  const auth = false;
   return (
     <div className="navCompo">
       <div className="left-nav">

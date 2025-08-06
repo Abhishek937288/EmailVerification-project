@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet, Navigate } from "react-router-dom";
 
-const SigninLayout = () => {
-  const auth = true;
+const PublicLayout = () => {
+  const auth = false;
   if (auth) {
     return (
       <>
@@ -18,4 +18,4 @@ const SigninLayout = () => {
   }
 };
 
-export default SigninLayout;
+export default PublicLayout;

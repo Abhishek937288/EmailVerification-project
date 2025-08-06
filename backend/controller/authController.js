@@ -8,11 +8,18 @@ import { sendOtpEmail } from "../utils/sendOtp.js";
 
 export const signUp = async (req, res) => {
   const { username, email, password } = req.body;
-  if (!username || !email || password.length < 6) {
+  if (!username || !email) {
     return res.json({
       data: null,
       success: false,
-      messaged: "all fields requied",
+      message: "all fields requied",
+    });
+  }
+  if(password.length < 6){
+    return res.json({
+      data: null,
+      success: false,
+      message: "password should more that 6 letters",
     });
   }
   const existingUser = await UserModel.findOne({ email });
@@ -20,7 +27,7 @@ export const signUp = async (req, res) => {
     return res.json({
       data: null,
       success: false,
-      messaged: "user already exsited",
+      message: "user already exsited",
     });
   }
 

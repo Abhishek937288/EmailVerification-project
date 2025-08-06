@@ -1,5 +1,6 @@
 import "./App.css";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
@@ -7,9 +8,9 @@ import About from "./pages/About/About";
 import Signup from "./pages/Signup/Signup";
 import RootLayout from "./Layouts/layouts";
 import { getAuth } from "./Util/auth";
-import Navbar from "./components/Navbar";
-import SigninLayout from "./Layouts/SigninLayout";
-
+import PublicLayout from "./Layouts/Public";
+import VerifyOtp from "./components/VerifyOtp/VerifyOtp";
+import Authlayout from "./Layouts/Authlayout";
 
 function MainLayout() {
   const auth = getAuth();
@@ -23,10 +24,10 @@ function MainLayout() {
   );
 }
 
-
 function App() {
   return (
     <div className="app">
+       <ToastContainer />
       <Routes>
         <Route element={<MainLayout />}>
           <Route element={<RootLayout />}>
@@ -35,14 +36,13 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Route>
-
-        <Route element={<SigninLayout/>}>
-        <Route element={<RootLayout />}>
+        <Route element={<PublicLayout />}>
+         <Route element={<Authlayout/>}>
           <Route path="/signup" element={<Signup />} />
+          <Route path="/verifyotp/:email" element={<VerifyOtp />} />
           </Route>
         </Route>
       </Routes>
-      <footer>footer</footer>
     </div>
   );
 }

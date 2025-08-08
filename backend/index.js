@@ -28,3 +28,4 @@ connectDb();
 app.listen(port, () => {
   console.log(`our port is running on the ${port}`);
 });
+// everting here is pro expect you forget to have proper error handler you can check in the improved verion of this code branch

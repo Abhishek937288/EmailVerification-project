@@ -8,6 +8,7 @@ import Authlayout from "./Layouts/Authlayout";
 import RootLayout from "./Layouts/RootLayout";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
+import Verify from "./pages/auth/Verify";
 
 function MainLayout() {
   const auth = getAuth();
@@ -33,7 +34,8 @@ function App() {
             <Route element={<Authlayout />}>
               <Route path="/sign-up" element={<Signup />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/verifyotp/:email" element={<VerifyOtp />} />
+              <Route path="/verify" element={<Verify />} />
+              {/* <Route path="/verifyotp/:email" element={<VerifyOtp />} /> */}
             </Route>
           </Route>
         </Route>

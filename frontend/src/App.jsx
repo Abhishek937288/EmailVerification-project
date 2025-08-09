@@ -1,15 +1,13 @@
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Contact from "./pages/Contact/Contact";
-import About from "./pages/About/About";
-import Signup from "./pages/signup/Signup";
 import { getAuth } from "./Util/auth";
 import PublicLayout from "./Layouts/Public";
 import VerifyOtp from "./components/VerifyOtp/VerifyOtp";
 import Authlayout from "./Layouts/Authlayout";
 import RootLayout from "./Layouts/RootLayout";
 import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/Signup";
 
 function MainLayout() {
   const auth = getAuth();

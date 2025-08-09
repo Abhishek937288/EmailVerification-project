@@ -9,6 +9,7 @@ import RootLayout from "./Layouts/RootLayout";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Verify from "./pages/auth/Verify";
+import ForgetPassword from "./pages/auth/ForgetPassword";
 
 function MainLayout() {
   const auth = getAuth();
@@ -35,6 +36,8 @@ function App() {
               <Route path="/sign-up" element={<Signup />} />
               <Route path="/login" element={<Login />} />
               <Route path="/verify" element={<Verify />} />
+              <Route path="/forget-password" element={<ForgetPassword />} />
+
               {/* <Route path="/verifyotp/:email" element={<VerifyOtp />} /> */}
             </Route>
           </Route>

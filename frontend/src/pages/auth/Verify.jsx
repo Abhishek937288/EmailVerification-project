@@ -7,8 +7,8 @@ const Verify = () => {
     <main className="flex h-screen items-center justify-center">
       <div className="flex-1 max-w-[390px] flex flex-col gap-2 text-center">
         <Heading>Verify Your Email</Heading>
-        <Text>Enter the 6-digit code sent to </Text>
-        <p className="text-sm text-slate-700 -mt-2">example@gmail.com</p>
+        <Text>Enter the 6-digit code sent to your email address</Text>
+        <p className="text-sm text-slate-700 -mt-1">example@gmail.com</p>
         <form className="mt-3">
           <OTPInput />
           <div className="mt-8"></div>

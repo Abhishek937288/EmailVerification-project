@@ -10,6 +10,7 @@ import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Verify from "./pages/auth/Verify";
 import ForgetPassword from "./pages/auth/ForgetPassword";
+import ResetPassword from "./pages/auth/ResetPassword";
 
 function MainLayout() {
   const auth = getAuth();
@@ -37,7 +38,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/verify" element={<Verify />} />
               <Route path="/forget-password" element={<ForgetPassword />} />
-
+              <Route path="/reset-password" element={<ResetPassword />} />
               {/* <Route path="/verifyotp/:email" element={<VerifyOtp />} /> */}
             </Route>
           </Route>

@@ -1,4 +1,3 @@
-import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -30,8 +29,8 @@ function App() {
         <Route element={<RootLayout />}>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} /> */}
           </Route>
           <Route element={<PublicLayout />}>
             <Route element={<Authlayout />}>

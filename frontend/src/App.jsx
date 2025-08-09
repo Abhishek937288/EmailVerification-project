@@ -3,12 +3,13 @@ import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
-import Signup from "./pages/Signup/Signup";
+import Signup from "./pages/signup/Signup";
 import { getAuth } from "./Util/auth";
 import PublicLayout from "./Layouts/Public";
 import VerifyOtp from "./components/VerifyOtp/VerifyOtp";
 import Authlayout from "./Layouts/Authlayout";
 import RootLayout from "./Layouts/RootLayout";
+import Login from "./pages/auth/Login";
 
 function MainLayout() {
   const auth = getAuth();
@@ -29,12 +30,11 @@ function App() {
         <Route element={<RootLayout />}>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} /> */}
           </Route>
           <Route element={<PublicLayout />}>
             <Route element={<Authlayout />}>
-              <Route path="/signup" element={<Signup />} />
+              <Route path="/sign-up" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/verifyotp/:email" element={<VerifyOtp />} />
             </Route>
           </Route>

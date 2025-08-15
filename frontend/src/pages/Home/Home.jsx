@@ -1,10 +1,11 @@
-import React from 'react'
-import "./Home.css"
+import Hero from "../../components/landing/Hero";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <main>
+      <Hero />
+    </main>
+  );
+};
 
-export default Home
+export default Home;

@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 configDotenv();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 const frontendUrl = process.env.FRONTENDURL;
 
 app.use(express.json());
@@ -28,3 +28,4 @@ connectDb();
 app.listen(port, () => {
   console.log(`our port is running on the ${port}`);
 });
+// everting here is pro expect you forget to have proper error handler you can check in the improved verion of this code branch

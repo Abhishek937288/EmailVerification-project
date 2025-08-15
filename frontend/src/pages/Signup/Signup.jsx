@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Signup.css";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { userContext } from "../../context/userContext";
 import { useContext } from "react";
 
 const Signup = () => {
-  const{setVerify} = useContext(userContext);
+  const { setVerify } = useContext(userContext);
   const bakendUrl = import.meta.env.BACKENDURL;
   const navigate = useNavigate();
-  const [formstate, setFormstate] = useState("Signin");
+  const [formstate, setFormstate] = useState("Signin"); // instead of having one page for login and sign up haveing multiple page is better
   const [formdata, setFormdata] = useState(
     formstate === "Signup"
       ? {

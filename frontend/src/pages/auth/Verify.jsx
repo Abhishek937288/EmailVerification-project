@@ -1,5 +1,4 @@
 import { Button, Heading, Text } from "@radix-ui/themes";
-import "react-otp-kit/dist/index.css";
 import OTPInput from "../../components/shared/OTPInput";
 
 const Verify = () => {
